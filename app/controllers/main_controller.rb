@@ -1,11 +1,8 @@
-class MainController < ActionController::Base
-  protect_from_forgery
+class MainController < ApplicationController
 
-  def index
-    unless session[:access_token]
-      redirect GithubOAuth.authorize_url('github_client_id', 'github_client_secret')
-    end
-    redirect_to pr_path
+  def home
+
+    render :home
   end
 
   def oauth
