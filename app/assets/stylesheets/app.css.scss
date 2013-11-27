@@ -14,7 +14,7 @@ html {
   background: rgba(197,207,198,0.8);
   padding: 10px;
   height: 100%;
--webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -40,6 +40,7 @@ h1,h2,h3,h4,h5,h6 {
 ul,ol {
   padding: 0;
   margin: 0;
+  list-style: none
 }
 
 body .page,
@@ -51,8 +52,9 @@ body .page > .row {
 
 $sidebar-color:rgba(71,72,67,0.5);
 section.sidebar,
-section.main {
-  height: 100%;
+section.main,
+section.list-holder {
+  height: 98%;
   background: $sidebar-color;
   box-shadow: 0 0 1px 2px rgba(208,216,209,1) inset;
   background-clip: border-box;
@@ -70,9 +72,7 @@ section.main {
   padding: 15px;
 }
 
-.sidebar {
-
-  .lists {
+ .lists {
     margin-top: 10px;
   }
 
@@ -105,10 +105,10 @@ section.main {
 
   .lists > li .action {
     text-transform: uppercase;
-    font-size: 14px;
     text-align: center;
     color: #fff;
     font-weight: bold;
+    padding: 5px 0;
     box-shadow: 0 0 1px 2px tint($sidebar-color,20) inset;
   }
 
@@ -118,4 +118,3 @@ section.main {
     cursor: pointer;
     box-shadow: 0 0 1px 2px shade ($sidebar-color,20) inset;
   }
-}
