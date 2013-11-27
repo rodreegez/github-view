@@ -35,6 +35,7 @@ module PrView
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
+    config.secret_token = '49c2d2aa9d377b6a177fc7cb4ed3b767247b086764875c8900e50b88b9ff336636d6f82a06a7d71c259c75b268548f9ee4bb9f6f58a57195e022394b60c4a5c9'
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
