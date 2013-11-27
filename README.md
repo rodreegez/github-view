@@ -2,4 +2,4 @@ github-view
 ===========
 
 
-### we are sparta, and we shall slay the github emails
+### fixing up a simple github ui
