@@ -1,8 +1,7 @@
 class MainController < ApplicationController
 
-  def home
-
-    render :home
+  def index
+    render :index
   end
 
   def oauth

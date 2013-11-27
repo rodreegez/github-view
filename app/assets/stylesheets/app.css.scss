@@ -20,9 +20,19 @@ html {
 body {
   min-height: 100%;
   height: 100%;
-  color:#ddd;
+  color:#bbb;
   font-family: 'Inconsolata', cursive;
 }
+
+a {
+  color:#bbb;
+  text-decoration: none;
+}
+a:hover {
+  color:tint(#bbb,40)
+}
+
+
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
 }
@@ -57,21 +67,55 @@ section.main {
 section.main {
   background: rgba(255,255,255,0.7);
   color:rgb(71,72,67);
+  padding: 15px;
 }
 
+.sidebar {
 
-.sidebar .repos {
-  margin-top: 10px;
+  .lists {
+    margin-top: 10px;
+  }
+
+  .lists  > li {
+    margin: 5px 10px;
+    padding: 0 10px;
+    line-height: 1;
+  }
+
+  .lists  > li > * {
+    line-height: 2;
+    margin: 0;
+  }
+
+  .lists  > li,
+  .lists > li .action {
+    background: $sidebar-color;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 2px tint($sidebar-color,30) inset;
+  }
+
+  .lists > li.actions {
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  .lists > li.actions:hover li {
+    box-shadow:none;
+  }
+
+  .lists > li .action {
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 1px 2px tint($sidebar-color,20) inset;
+  }
+
+  .lists > li .action:hover,
+  .lists > li .action.selected {
+    background: shade($sidebar-color,30);
+    cursor: pointer;
+    box-shadow: 0 0 1px 2px shade ($sidebar-color,20) inset;
+  }
 }
-.sidebar .repos li {
-  background: $sidebar-color;
-  margin: 5px 10px;
-  min-height: 40px;
-  padding: 10px;
-  border-radius: 2px;
-  box-shadow: 0 0 1px 2px tint($sidebar-color,30) inset;
-
-}
-
-
-
