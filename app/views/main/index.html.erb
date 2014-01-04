@@ -1,7 +1,8 @@
 <section class="sidebar c3">
   <ol class="lists">
-    <% 20.times do |row| %>
-    <li> <a href="repos/1"> Example Repo </a> </li>
+    <% @repos.each do |repo| %>
+
+    <li> <a href="repos/1"> <%= repo["name"] %> </a> </li>
     <% end %>
   </ol>
 </section>
