@@ -1,11 +1,52 @@
 <section class="sidebar c3">
   <ol class="lists">
     <% @repos.each do |repo| %>
-
     <li> <a href="repos/1"> <%= repo["name"] %> </a> </li>
     <% end %>
   </ol>
 </section>
 <section class="c9 main section">
-  <h1> main section </h1>
+
+    <ol class="lists light small ">
+    <% @issues.each do |issue| %>
+    <li>
+      <div class="c9">
+        <a href="repos/1" > <%= issue["title"] %> </a>
+
+        <ul class="actions inline">
+          <li class="comments">
+            <span class="count icon-bubble">5</spam>
+          </li>
+          <li class="code-quality">
+            <span class="icon-eye"></span>
+          </li>
+
+          <li class="quality-assurance">
+            <span class="icon-signup"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="c3 actions lists-styling">
+        <a class="c5_5 action selected">close</a>
+        <a class="c5_5 action end">assign</a>
+      </div>
+      <div class="c3 actions lists-styling pull-right">
+        <a class="c12 action">participants</a>
+        <a class="action"> <img class="avatar" src="https://1.gravatar.com/avatar/8ec1383b240b5ba15ffb9743fceb3c0e?d=https%3A%2F%2Fidenticons.github.com%2F23d23cfad64cc753b8c3d43b2042a0d6.png&r=x&s=140" /></a>
+        <a class="action"> <img class="avatar" src="https://0.gravatar.com/avatar/d4b8c635ea7914f0bb3a39a7a28f8f67?d=https%3A%2F%2Fidenticons.github.com%2F72e3b875911b1d0e57a33a1df2069eb0.png&r=x&s=440" /></a>
+        <a class="action"> <img class="avatar" src="https://1.gravatar.com/avatar/3f4444967dfc7a5a2a71d24175d94c3c?d=https%3A%2F%2Fidenticons.github.com%2F918910581fee4f9ed2523967818955a1.png&r=x&s=440" /></a>
+        <a class="action"> <img class="avatar" src="https://1.gravatar.com/avatar/087f948e082987b362468e2a9aa1e121?d=https%3A%2F%2Fidenticons.github.com%2F42723e31a197e3f95bff0efe66221430.png&r=x&s=440" /></a>
+        <a class="action"> <img class="avatar" src="https://1.gravatar.com/avatar/470ef9e8f3a33e87420bebe55e868e30?d=https%3A%2F%2Fidenticons.github.com%2F50ff4c6f395882f1ac8cfb90c7767fbe.png&r=x&s=400" /></a>
+        <a class="action"> <img class="avatar" src="https://1.gravatar.com/avatar/12671f6e305645b8645e5a442e642267?d=https%3A%2F%2Fidenticons.github.com%2Fa50515534bcce7d66313f21eabe77c65.png&r=x&s=400" /></a>
+      </div>
+
+
+    </li>
+    <% end %>
+    </ol>
+
+  <div class="c3">
+    <a class="c5_5 action selected">close</a>
+      <a class="c5_5 action end">assign</a>
+  </div>
 </section>

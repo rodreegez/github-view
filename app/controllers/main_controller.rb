@@ -5,6 +5,7 @@ class MainController < ApplicationController
       redirect_to GithubOAuth.authorize_url(ENV["GITHUB_ID"], ENV["GITHUB_SECRET"]) and return
     end
     @repos = Repo.all
+    @issues = Issue.user_all
   end
 
   def oauth

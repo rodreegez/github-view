@@ -1,3 +1,7 @@
+/*
+ *= require_self
+*/
+@import url(http://i.icomoon.io/public/temp/eae6a928fc/UntitledProject2/style.css);
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Gruppo);
 // Add percentage of white to a color
 @function tint($color, $percent){
@@ -43,6 +47,10 @@ ul,ol {
   list-style: none
 }
 
+.pull-right {
+  float: right !important;
+}
+
 body .page,
 body .page > .row {
   min-height: 100%;
@@ -75,35 +83,96 @@ section.main {
  .lists {
     margin-top: 10px;
   }
+.lists > li {
+  overflow: hidden;
+}
 
-  .lists  > li {
-    margin: 5px 10px;
-    padding: 0 10px;
-    line-height: 1;
-  }
+.lists.light *,
+.lists.light a {
+  color: #fff;
+}
+
+.lists.small,
+.lists.small * {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.lists.small [class^="icon-"]:before,
+.lists.small [class*=" icon-"]:before {
+  font-size: 1rem;
+  margin-right: 5px;
+}
 
   .lists  > li > * {
     line-height: 2;
     margin: 0;
   }
 
+  .lists .actions.inline {
+    overflow: hidden;
+  }
+
+
+  .lists .actions.inline li {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    padding: 10px;
+    border: 0px solid;
+    border-radius: 5px;
+    min-height: 36px;
+    box-shadow: none;
+  }
+
+  .lists .actions.inline li > *,
+  .lists .actions.inline li > *[class^="icon-"]:before,
+  .lists .actions.inline li > *[class^="icon-"]:before {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  .lists  > li {
+    margin: 5px 10px;
+  }
+
   .lists  > li,
-  .lists > li .action {
+  .lists .lists-styling {
+    padding: 0 10px;
+    line-height: 2;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .lists  > li,
+  .lists > li .action,
+  .lists .lists-styling {
     background: $sidebar-color;
     border-radius: 2px;
     box-shadow: 0 0 1px 2px tint($sidebar-color,30) inset;
   }
 
-  .lists > li.actions {
+  .lists .lists-styling .action:last-of-type {
+    margin-bottom: 0px;
+  }
+
+
+  .lists .actions {
     padding: 5px;
     overflow: hidden;
   }
 
-  .lists > li.actions:hover li {
+  .lists * > .actions ~ .actions {
+    margin-top: -15px;
+  }
+
+  .lists .actions:hover li {
     box-shadow:none;
   }
 
-  .lists > li .action {
+  .lists .actions > li {
     text-transform: uppercase;
     text-align: center;
     color: #fff;
@@ -112,9 +181,16 @@ section.main {
     box-shadow: 0 0 1px 2px tint($sidebar-color,20) inset;
   }
 
-  .lists > li .action:hover,
-  .lists > li .action.selected {
+  .lists .actions > li:hover,
+  .lists .actions > li.selected {
     background: shade($sidebar-color,30);
     cursor: pointer;
     box-shadow: 0 0 1px 2px shade ($sidebar-color,20) inset;
+  }
+
+  .avatar {
+    height: 64px;
+    padding: 8px ;
+    display: block;
+    float: left;
   }
