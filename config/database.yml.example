@@ -7,14 +7,14 @@ common: &common
 
 development: &development
   <<: *common
-  database: github_notifications_development
+  database: PROJECT_NAME_development
 
 test: &test
   <<: *common
-  database: github_notifications_test
+  database: PROJECT_NAME_test
 
 
 production: &production
   <<: *common
-  database: github_notifications_development
+  database: PROJECT_NAME_development
 
