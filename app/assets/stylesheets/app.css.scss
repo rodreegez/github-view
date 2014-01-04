@@ -36,6 +36,18 @@ a:hover {
   color:tint(#bbb,40)
 }
 
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1 0;
+  padding: 0.5em 0;
+}
+
+.small {
+  font-size:0.9rem;
+  font-weight: bold;
+}
+
 
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
@@ -45,6 +57,10 @@ ul,ol {
   padding: 0;
   margin: 0;
   list-style: none
+}
+
+.large {
+  font-size:1rem !important;
 }
 
 .pull-right {
@@ -92,11 +108,7 @@ section.main {
   color: #fff;
 }
 
-.lists.small,
-.lists.small * {
-  font-size: 1rem;
-  font-weight: bold;
-}
+
 
 .lists.small [class^="icon-"]:before,
 .lists.small [class*=" icon-"]:before {
@@ -104,93 +116,105 @@ section.main {
   margin-right: 5px;
 }
 
-  .lists  > li > * {
-    line-height: 2;
-    margin: 0;
-  }
+.lists  > li > * {
+  margin: 0;
+}
 
-  .lists .actions.inline {
-    overflow: hidden;
-  }
-
-
-  .lists .actions.inline li {
-    display: block;
-    float: left;
-    margin-right: 10px;
-    text-align: center;
-    padding: 10px;
-    border: 0px solid;
-    border-radius: 5px;
-    min-height: 36px;
-    box-shadow: none;
-  }
-
-  .lists .actions.inline li > *,
-  .lists .actions.inline li > *[class^="icon-"]:before,
-  .lists .actions.inline li > *[class^="icon-"]:before {
-    display: block;
-    margin: 0 auto;
-  }
+.lists .actions.inline {
+  overflow: hidden;
+}
 
 
-  .lists  > li {
-    margin: 5px 10px;
-  }
+.lists .actions.inline li {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  text-align: center;
+  padding: 10px;
+  border: 0px solid;
+  border-radius: 5px;
+  min-height: 36px;
+  box-shadow: none;
+}
 
-  .lists  > li,
-  .lists .lists-styling {
-    padding: 0 10px;
-    line-height: 2;
-    margin-bottom: 15px;
-    margin-top: 15px;
-  }
-
-  .lists  > li,
-  .lists > li .action,
-  .lists .lists-styling {
-    background: $sidebar-color;
-    border-radius: 2px;
-    box-shadow: 0 0 1px 2px tint($sidebar-color,30) inset;
-  }
-
-  .lists .lists-styling .action:last-of-type {
-    margin-bottom: 0px;
-  }
+.lists .actions.inline li > *,
+.lists .actions.inline li > *[class^="icon-"]:before,
+.lists .actions.inline li > *[class^="icon-"]:before {
+  display: block;
+  margin: 0 auto;
+}
 
 
-  .lists .actions {
-    padding: 5px;
-    overflow: hidden;
-  }
+.lists  > li {
+  margin: 5px 10px;
+}
 
-  .lists * > .actions ~ .actions {
-    margin-top: -15px;
-  }
+.lists  > li,
+.lists .list-styling {
+  padding: 0 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
 
-  .lists .actions:hover li {
-    box-shadow:none;
-  }
+.lists  > li,
+.lists > li .action,
+.lists .list-styling {
+  background: $sidebar-color;
+  border-radius: 2px;
+  box-shadow: 0 0 1px 2px tint($sidebar-color,30) inset;
+}
 
-  .lists .actions > li {
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-    padding: 5px 0;
-    box-shadow: 0 0 1px 2px tint($sidebar-color,20) inset;
-  }
+.lists .list-styling .action:last-of-type {
+  margin-bottom: 0px;
+}
 
-  .lists .actions > li:hover,
-  .lists .actions > li.selected {
-    background: shade($sidebar-color,30);
-    cursor: pointer;
-    box-shadow: 0 0 1px 2px shade ($sidebar-color,20) inset;
-  }
+.lists .list-styling .action {
+  margin-bottom: 5px;
+}
 
-  .avatar {
-    height: 64px;
-    padding: 8px ;
-    display: block;
-    float: left;
-  }
+.lists .actions.list-styling {
+  padding-bottom: 0px
+}
+
+.lists .actions {
+  padding: 5px;
+  overflow: hidden;
+}
+
+.lists * > .actions ~ .actions {
+  margin-top: -15px;
+}
+
+.lists .actions:hover li {
+  box-shadow:none;
+}
+
+.lists .actions > li {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 0;
+  box-shadow: 0 0 1px 2px tint($sidebar-color,20) inset;
+  text-align: center;
+}
+
+.lists .actions > li:hover,
+.lists .actions > li.selected {
+  background: shade($sidebar-color,30);
+  cursor: pointer;
+  box-shadow: 0 0 1px 2px shade ($sidebar-color,20) inset;
+}
+
+.actions .action {
+  text-align: center;
+  text-transform: uppercase;
+  font-size:0.8rem;
+}
+
+.avatar {
+  height: 64px;
+  padding: 8px ;
+  display: block;
+  float: left;
+}

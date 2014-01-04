@@ -11,8 +11,9 @@
     <% @issues.each do |issue| %>
     <li>
       <div class="c9">
-        <a href="repos/1" > <%= issue["title"] %> </a>
+        <h2 href="repos/1" > <%= issue["title"] %> </h2>
 
+        <div class="small"><%= markdown(issue["body"]) %></div>
         <ul class="actions inline">
           <li class="comments">
             <span class="count icon-bubble">5</spam>
@@ -26,11 +27,13 @@
           </li>
         </ul>
       </div>
-      <div class="c3 actions lists-styling">
-        <a class="c5_5 action selected">close</a>
-        <a class="c5_5 action end">assign</a>
+      <div class="c3 actions list-styling with-buttons">
+        <a class="c5_5 action ">assign</a>
+        <a class="c5_5 action end">close</a>
+        <a class="c5_5 action ">qa</a>
+        <a class="c5_5 action end">complete</a>
       </div>
-      <div class="c3 actions lists-styling pull-right">
+      <div class="c3 actions list-styling pull-right">
         <a class="c12 action">participants</a>
         <a class="action"> <img class="avatar" src="https://1.gravatar.com/avatar/8ec1383b240b5ba15ffb9743fceb3c0e?d=https%3A%2F%2Fidenticons.github.com%2F23d23cfad64cc753b8c3d43b2042a0d6.png&r=x&s=140" /></a>
         <a class="action"> <img class="avatar" src="https://0.gravatar.com/avatar/d4b8c635ea7914f0bb3a39a7a28f8f67?d=https%3A%2F%2Fidenticons.github.com%2F72e3b875911b1d0e57a33a1df2069eb0.png&r=x&s=440" /></a>
