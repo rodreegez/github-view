@@ -9,5 +9,8 @@ PrView::Application.routes.draw do
   end
 
   get('/','main','index')
+  get('/oauth','main',"oauth")
+
   get('/repos/:id','repo',"show")
+
 end
