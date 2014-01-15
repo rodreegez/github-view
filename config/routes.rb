@@ -13,4 +13,5 @@ PrView::Application.routes.draw do
 
   get('/repos/:id','repo',"show")
 
+  root :to => "main#index"
 end

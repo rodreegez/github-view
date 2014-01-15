@@ -3,9 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 gem 'pg'
-gem "github_api"
+
+gem 'devise'
+gem 'github_api'
 gem 'github-oauth'
-gem  'httparty'
+gem 'httparty'
 gem 'icomoon-rails'
 
 
