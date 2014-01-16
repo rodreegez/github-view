@@ -1,11 +1,10 @@
 class MainController < ApplicationController
 
   def index
-    unless session[:access_token]
-      redirect_to GithubOAuth.authorize_url(ENV["GITHUB_ID"], ENV["GITHUB_SECRET"]) and return
+    if user_signed_in?
+      @repos = Repo.all
+      @issues = Issue.user_all
     end
-    @repos = Repo.all
-    @issues = Issue.user_all
   end
 
   def oauth

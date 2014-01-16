@@ -1,13 +1,16 @@
 <section class="sidebar c3">
   <ol class="lists">
-    <% @repos.each do |repo| %>
-    <li> <a href="repos/1"> <%= repo["name"] %> </a> </li>
+    <% if @repos %>
+      <% @repos.each do |repo| %>
+      <li> <a href="repos/1"> <%= repo["name"] %> </a> </li>
+      <% end %>
     <% end %>
   </ol>
 </section>
 <section class="c9 main section">
 
     <ol class="lists light small ">
+    <% if @issues %>
     <% @issues.each do |issue| %>
     <li>
       <div class="c9">
@@ -42,6 +45,7 @@
 
 
     </li>
+    <% end %>
     <% end %>
     </ol>
 
