@@ -1,5 +1,7 @@
 PrView::Application.routes.draw do
 
+  devise_for :users
+
   def get(path,controller,name,as = name)
     match path => controller + '#' + name, :as => as, :via => [:get]
   end
