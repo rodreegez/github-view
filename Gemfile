@@ -9,6 +9,7 @@ gem 'github_api'
 gem 'github-oauth'
 gem 'httparty'
 gem 'icomoon-rails'
+gem 'omniauth-github'
 
 
 # Gems used only for assets and not required
