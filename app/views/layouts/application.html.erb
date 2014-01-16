@@ -10,6 +10,11 @@
 <body>
 <div class="grid w1200 page">
   <div class="row">
+    <% unless user_signed_in? %>
+      <%= link_to "Sign in with GitHub", user_omniauth_authorize_path(:github) %>
+    <% end %>
+  </div>
+  <div class="row">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </div>
